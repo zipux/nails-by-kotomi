@@ -1,11 +1,11 @@
 /* ============================================================
    Nails by Kotomi — Global Stylesheet
    Palette:
-     --pink:     #f2a7bb  (blush pink)
-     --cream:    #fdf6f0  (cream background)
-     --nude:     #e8c9b0  (warm nude)
-     --offwhite: #fafafa
-     --gold:     #c9a84c  (soft gold accent)
+     --rose:     #8c4f63  (deep mauve rose)
+     --cream:    #f5f0ea  (warm ivory)
+     --nude:     #d4bfb0  (cool taupe)
+     --offwhite: #f9f6f2
+     --gold:     #b8933a  (rich champagne gold)
    Fonts: Cormorant Garamond (headings), Lato (body)
    ============================================================ */
 
@@ -14,18 +14,18 @@
 
 /* ── Custom Properties ── */
 :root {
-  --pink:      #f2a7bb;
-  --pink-light:#fce8ef;
-  --cream:     #fdf6f0;
-  --nude:      #e8c9b0;
-  --offwhite:  #fafafa;
-  --gold:      #c9a84c;
-  --gold-dark: #a8872e;
-  --text:      #3a3028;
-  --text-muted:#8a7a72;
+  --pink:      #8c4f63;
+  --pink-light:#ede0e5;
+  --cream:     #f5f0ea;
+  --nude:      #d4bfb0;
+  --offwhite:  #f9f6f2;
+  --gold:      #b8933a;
+  --gold-dark: #8f6e22;
+  --text:      #1a1614;
+  --text-muted:#6b5f58;
   --white:     #ffffff;
-  --shadow:    0 4px 24px rgba(58, 48, 40, 0.08);
-  --shadow-hover: 0 8px 36px rgba(58, 48, 40, 0.15);
+  --shadow:    0 4px 24px rgba(26, 22, 20, 0.09);
+  --shadow-hover: 0 8px 36px rgba(26, 22, 20, 0.18);
   --radius:    12px;
   --transition: 0.3s ease;
   --nav-height: 72px;
@@ -151,9 +151,9 @@ p {
 }
 
 .btn--primary:hover {
-  background-color: #e8899e;
+  background-color: #7a3f54;
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(242, 167, 187, 0.45);
+  box-shadow: 0 6px 20px rgba(140, 79, 99, 0.4);
 }
 
 .btn--outline {
@@ -226,7 +226,7 @@ p {
   top: 0;
   z-index: 1000;
   height: var(--nav-height);
-  background-color: rgba(253, 246, 240, 0.92);
+  background-color: rgba(249, 246, 242, 0.94);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border-bottom: 1px solid transparent;
@@ -385,8 +385,8 @@ p {
   inset: 0;
   background: linear-gradient(
     135deg,
-    rgba(253, 246, 240, 0.75) 0%,
-    rgba(242, 167, 187, 0.25) 100%
+    rgba(249, 246, 242, 0.78) 0%,
+    rgba(140, 79, 99, 0.18) 100%
   );
   z-index: 1;
 }
@@ -614,7 +614,7 @@ p {
 .footer__social-icon:hover {
   border-color: var(--pink);
   color: var(--pink);
-  background: rgba(242, 167, 187, 0.1);
+  background: rgba(140, 79, 99, 0.1);
 }
 
 .footer__bottom {
