@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -20,20 +20,32 @@
         Nails by <span>Kotomi</span>
       </a>
       <ul class="nav__links" role="list">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="services.html" class="active">Services</a></li>
-        <li><a href="booking.html" class="btn btn--primary">Book Now</a></li>
+        <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+        <li><a href="gallery.html" data-i18n="nav.gallery">Gallery</a></li>
+        <li><a href="services.html" class="active" data-i18n="nav.services">Services</a></li>
+        <li><a href="booking.html" class="btn btn--primary" data-i18n="nav.bookNow">Book Now</a></li>
+        <li>
+          <button class="lang-toggle" aria-label="Switch language">
+            <span class="lang-toggle__en">EN</span>
+            <span class="lang-toggle__sep">·</span>
+            <span class="lang-toggle__ja">日本語</span>
+          </button>
+        </li>
       </ul>
       <button class="nav__toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
     </div>
     <div class="nav__mobile" id="nav-mobile" role="menu">
-      <a href="index.html" role="menuitem">Home</a>
-      <a href="gallery.html" role="menuitem">Gallery</a>
-      <a href="services.html" role="menuitem">Services &amp; Pricing</a>
-      <a href="booking.html" role="menuitem">Book an Appointment</a>
+      <a href="index.html" role="menuitem" data-i18n="nav.home">Home</a>
+      <a href="gallery.html" role="menuitem" data-i18n="nav.gallery">Gallery</a>
+      <a href="services.html" role="menuitem" data-i18n="nav.mobileServices">Services &amp; Pricing</a>
+      <a href="booking.html" role="menuitem" data-i18n="nav.mobileBook">Book an Appointment</a>
+      <button class="lang-toggle" aria-label="Switch language">
+        <span class="lang-toggle__en">EN</span>
+        <span class="lang-toggle__sep">·</span>
+        <span class="lang-toggle__ja">日本語</span>
+      </button>
     </div>
   </nav>
 
@@ -43,9 +55,9 @@
   ════════════════════════════════════════ -->
   <header class="page-hero" aria-label="Services page header">
     <div class="container">
-      <span class="section-eyebrow">What's on Offer</span>
-      <h1>Services &amp; Pricing</h1>
-      <p>Transparent pricing, no hidden costs — just beautiful nails every time.</p>
+      <span class="section-eyebrow" data-i18n="services.heroEyebrow">What's on Offer</span>
+      <h1 data-i18n="services.heroTitle">Services &amp; Pricing</h1>
+      <p data-i18n="services.heroP">Transparent pricing, no hidden costs — just beautiful nails every time.</p>
     </div>
   </header>
 
@@ -57,9 +69,9 @@
     <div class="container">
 
       <header class="section-header">
-        <span class="section-eyebrow">Menu</span>
-        <h2 id="services-title">Core Services</h2>
-        <p>All appointments include a consultation, cuticle care, shape &amp; finish.</p>
+        <span class="section-eyebrow" data-i18n="services.menuEyebrow">Menu</span>
+        <h2 id="services-title" data-i18n="services.menuTitle">Core Services</h2>
+        <p data-i18n="services.menuP">All appointments include a consultation, cuticle care, shape &amp; finish.</p>
       </header>
 
       <div class="services-grid" role="list">
@@ -67,85 +79,80 @@
         <!-- Gel Manicure -->
         <article class="service-card" role="listitem" aria-label="Gel Manicure service">
           <div class="service-card__icon" aria-hidden="true">💅</div>
-          <h3 class="service-card__name">Gel Manicure</h3>
+          <h3 class="service-card__name" data-i18n="services.gel.name">Gel Manicure</h3>
           <p class="service-card__price">
-            £45 <small>/ session</small>
+            <span data-i18n="services.gel.price">£45</span> <small data-i18n="services.gel.unit">/ session</small>
           </p>
-          <p class="service-card__desc">
-            A long-lasting, high-shine gel finish that keeps your nails looking
-            freshly done for up to four weeks. Perfect for everyday wear.
+          <p class="service-card__desc" data-i18n="services.gel.desc">
+            A long-lasting, high-shine gel finish that keeps your nails looking freshly done for up to four weeks. Perfect for everyday wear.
           </p>
           <ul class="service-card__includes" aria-label="Includes">
-            <li>Nail shape &amp; cuticle prep</li>
-            <li>Base, colour &amp; top coat gel</li>
-            <li>LED cure &amp; nourishing oil finish</li>
-            <li>Lasts 3–4 weeks</li>
+            <li data-i18n="services.gel.i1">Nail shape &amp; cuticle prep</li>
+            <li data-i18n="services.gel.i2">Base, colour &amp; top coat gel</li>
+            <li data-i18n="services.gel.i3">LED cure &amp; nourishing oil finish</li>
+            <li data-i18n="services.gel.i4">Lasts 3–4 weeks</li>
           </ul>
-          <a href="booking.html" class="btn btn--primary">Book This Service</a>
+          <a href="booking.html" class="btn btn--primary" data-i18n="services.gel.btn">Book This Service</a>
         </article>
 
         <!-- Acrylic Full Set -->
         <article class="service-card" role="listitem" aria-label="Acrylic Full Set service">
           <div class="service-card__icon" aria-hidden="true">✨</div>
-          <h3 class="service-card__name">Acrylic Full Set</h3>
+          <h3 class="service-card__name" data-i18n="services.acrylic.name">Acrylic Full Set</h3>
           <p class="service-card__price">
-            £55 <small>/ session</small>
+            <span data-i18n="services.acrylic.price">£55</span> <small data-i18n="services.acrylic.unit">/ session</small>
           </p>
-          <p class="service-card__desc">
-            Build strength and length with a classic acrylic full set. Available in
-            a range of shapes — square, coffin, almond, stiletto, and more.
+          <p class="service-card__desc" data-i18n="services.acrylic.desc">
+            Build strength and length with a classic acrylic full set. Available in a range of shapes — square, coffin, almond, stiletto, and more.
           </p>
           <ul class="service-card__includes" aria-label="Includes">
-            <li>Natural nail prep &amp; tip application</li>
-            <li>Acrylic sculpt in your chosen shape</li>
-            <li>Gel colour or classic polish finish</li>
-            <li>Filing, buffing &amp; cuticle oil</li>
+            <li data-i18n="services.acrylic.i1">Natural nail prep &amp; tip application</li>
+            <li data-i18n="services.acrylic.i2">Acrylic sculpt in your chosen shape</li>
+            <li data-i18n="services.acrylic.i3">Gel colour or classic polish finish</li>
+            <li data-i18n="services.acrylic.i4">Filing, buffing &amp; cuticle oil</li>
           </ul>
-          <a href="booking.html" class="btn btn--primary">Book This Service</a>
+          <a href="booking.html" class="btn btn--primary" data-i18n="services.acrylic.btn">Book This Service</a>
         </article>
 
         <!-- Nail Art -->
         <article class="service-card" role="listitem" aria-label="Nail Art service">
           <div class="service-card__icon" aria-hidden="true">🎨</div>
-          <h3 class="service-card__name">Nail Art</h3>
+          <h3 class="service-card__name" data-i18n="services.art.name">Nail Art</h3>
           <p class="service-card__price">
-            from £10 <small>/ add-on</small>
+            <span data-i18n="services.art.price">from £10</span> <small data-i18n="services.art.unit">/ add-on</small>
           </p>
-          <p class="service-card__desc">
-            From delicate hand-painted florals to bold geometric designs — nail art
-            is added on top of any service. Bring your inspo and we'll make it happen.
+          <p class="service-card__desc" data-i18n="services.art.desc">
+            From delicate hand-painted florals to bold geometric designs — nail art is added on top of any service. Bring your inspo and we'll make it happen.
           </p>
           <ul class="service-card__includes" aria-label="Includes">
-            <li>Freehand painting &amp; fine detail work</li>
-            <li>Stamping, foils &amp; chrome effects</li>
-            <li>3D embellishments &amp; gems</li>
-            <li>Price varies by complexity</li>
+            <li data-i18n="services.art.i1">Freehand painting &amp; fine detail work</li>
+            <li data-i18n="services.art.i2">Stamping, foils &amp; chrome effects</li>
+            <li data-i18n="services.art.i3">3D embellishments &amp; gems</li>
+            <li data-i18n="services.art.i4">Price varies by complexity</li>
           </ul>
-          <a href="booking.html" class="btn btn--primary">Book This Service</a>
+          <a href="booking.html" class="btn btn--primary" data-i18n="services.art.btn">Book This Service</a>
         </article>
 
         <!-- Pedicure -->
         <article class="service-card" role="listitem" aria-label="Pedicure service">
           <div class="service-card__icon" aria-hidden="true">🌸</div>
-          <h3 class="service-card__name">Pedicure</h3>
+          <h3 class="service-card__name" data-i18n="services.pedicure.name">Pedicure</h3>
           <p class="service-card__price">
-            £40 <small>/ session</small>
+            <span data-i18n="services.pedicure.price">£40</span> <small data-i18n="services.pedicure.unit">/ session</small>
           </p>
-          <p class="service-card__desc">
-            A relaxing, thorough pedicure that leaves your feet feeling soft and your
-            toes perfectly polished. Ideal as a standalone treat or paired with a manicure.
+          <p class="service-card__desc" data-i18n="services.pedicure.desc">
+            A relaxing, thorough pedicure that leaves your feet feeling soft and your toes perfectly polished. Ideal as a standalone treat or paired with a manicure.
           </p>
           <ul class="service-card__includes" aria-label="Includes">
-            <li>Soak, exfoliation &amp; heel treatment</li>
-            <li>Cuticle care &amp; nail shaping</li>
-            <li>Gel or classic polish finish</li>
-            <li>Hydrating foot massage</li>
+            <li data-i18n="services.pedicure.i1">Soak, exfoliation &amp; heel treatment</li>
+            <li data-i18n="services.pedicure.i2">Cuticle care &amp; nail shaping</li>
+            <li data-i18n="services.pedicure.i3">Gel or classic polish finish</li>
+            <li data-i18n="services.pedicure.i4">Hydrating foot massage</li>
           </ul>
-          <a href="booking.html" class="btn btn--primary">Book This Service</a>
+          <a href="booking.html" class="btn btn--primary" data-i18n="services.pedicure.btn">Book This Service</a>
         </article>
 
       </div>
-      <!-- /services-grid -->
 
     </div>
   </section>
@@ -158,53 +165,44 @@
     <div class="container">
 
       <header class="section-header">
-        <span class="section-eyebrow">Extras</span>
-        <h2 id="addons-title">Add-Ons &amp; Enhancements</h2>
-        <p>Elevate any service with one of these popular extras.</p>
+        <span class="section-eyebrow" data-i18n="services.addonsEyebrow">Extras</span>
+        <h2 id="addons-title" data-i18n="services.addonsTitle">Add-Ons &amp; Enhancements</h2>
+        <p data-i18n="services.addonsP">Elevate any service with one of these popular extras.</p>
       </header>
 
       <div class="addons-grid" role="list">
-
         <div class="addon-card" role="listitem">
-          <p class="addon-card__name">Gel Removal</p>
-          <p class="addon-card__price">£10</p>
+          <p class="addon-card__name" data-i18n="services.addon1name">Gel Removal</p>
+          <p class="addon-card__price" data-i18n="services.addon1price">£10</p>
         </div>
-
         <div class="addon-card" role="listitem">
-          <p class="addon-card__name">Acrylic Infill</p>
-          <p class="addon-card__price">£35</p>
+          <p class="addon-card__name" data-i18n="services.addon2name">Acrylic Infill</p>
+          <p class="addon-card__price" data-i18n="services.addon2price">£35</p>
         </div>
-
         <div class="addon-card" role="listitem">
-          <p class="addon-card__name">Chrome Powder</p>
-          <p class="addon-card__price">£8</p>
+          <p class="addon-card__name" data-i18n="services.addon3name">Chrome Powder</p>
+          <p class="addon-card__price" data-i18n="services.addon3price">£8</p>
         </div>
-
         <div class="addon-card" role="listitem">
-          <p class="addon-card__name">Nail Gems</p>
-          <p class="addon-card__price">from £5</p>
+          <p class="addon-card__name" data-i18n="services.addon4name">Nail Gems</p>
+          <p class="addon-card__price" data-i18n="services.addon4price">from £5</p>
         </div>
-
         <div class="addon-card" role="listitem">
-          <p class="addon-card__name">Gold Foil</p>
-          <p class="addon-card__price">£6</p>
+          <p class="addon-card__name" data-i18n="services.addon5name">Gold Foil</p>
+          <p class="addon-card__price" data-i18n="services.addon5price">£6</p>
         </div>
-
         <div class="addon-card" role="listitem">
-          <p class="addon-card__name">Paraffin Wax</p>
-          <p class="addon-card__price">£12</p>
+          <p class="addon-card__name" data-i18n="services.addon6name">Paraffin Wax</p>
+          <p class="addon-card__price" data-i18n="services.addon6price">£12</p>
         </div>
-
         <div class="addon-card" role="listitem">
-          <p class="addon-card__name">Nail Repair</p>
-          <p class="addon-card__price">£5 / nail</p>
+          <p class="addon-card__name" data-i18n="services.addon7name">Nail Repair</p>
+          <p class="addon-card__price" data-i18n="services.addon7price">£5 / nail</p>
         </div>
-
         <div class="addon-card" role="listitem">
-          <p class="addon-card__name">French Tip</p>
-          <p class="addon-card__price">£8</p>
+          <p class="addon-card__name" data-i18n="services.addon8name">French Tip</p>
+          <p class="addon-card__price" data-i18n="services.addon8price">£8</p>
         </div>
-
       </div>
 
     </div>
@@ -218,28 +216,28 @@
     <div class="container">
 
       <header class="section-header">
-        <span class="section-eyebrow">Good to Know</span>
-        <h2 id="policies-title">Booking &amp; Policies</h2>
+        <span class="section-eyebrow" data-i18n="services.policiesEyebrow">Good to Know</span>
+        <h2 id="policies-title" data-i18n="services.policiesTitle">Booking &amp; Policies</h2>
       </header>
 
       <div style="display:grid; grid-template-columns: repeat(3,1fr); gap:2rem;">
 
         <div style="text-align:center; padding:2rem; background:var(--white); border-radius:var(--radius); box-shadow:var(--shadow);">
           <div style="font-size:2rem; margin-bottom:0.75rem;" aria-hidden="true">🗓️</div>
-          <h4 style="font-family:'Cormorant Garamond',serif; font-size:1.2rem; margin-bottom:0.5rem;">Cancellations</h4>
-          <p style="font-size:0.88rem;">Please give at least 24 hours' notice to cancel or reschedule. Late cancellations may incur a 50% fee.</p>
+          <h4 style="font-family:'Cormorant Garamond',serif; font-size:1.2rem; margin-bottom:0.5rem;" data-i18n="services.cancelTitle">Cancellations</h4>
+          <p style="font-size:0.88rem;" data-i18n="services.cancelP">Please give at least 24 hours' notice to cancel or reschedule. Late cancellations may incur a 50% fee.</p>
         </div>
 
         <div style="text-align:center; padding:2rem; background:var(--white); border-radius:var(--radius); box-shadow:var(--shadow);">
           <div style="font-size:2rem; margin-bottom:0.75rem;" aria-hidden="true">💳</div>
-          <h4 style="font-family:'Cormorant Garamond',serif; font-size:1.2rem; margin-bottom:0.5rem;">Payment</h4>
-          <p style="font-size:0.88rem;">Card, bank transfer and cash accepted. A deposit may be required for first-time bookings and longer appointments.</p>
+          <h4 style="font-family:'Cormorant Garamond',serif; font-size:1.2rem; margin-bottom:0.5rem;" data-i18n="services.paymentTitle">Payment</h4>
+          <p style="font-size:0.88rem;" data-i18n="services.paymentP">Card, bank transfer and cash accepted. A deposit may be required for first-time bookings and longer appointments.</p>
         </div>
 
         <div style="text-align:center; padding:2rem; background:var(--white); border-radius:var(--radius); box-shadow:var(--shadow);">
           <div style="font-size:2rem; margin-bottom:0.75rem;" aria-hidden="true">⏱️</div>
-          <h4 style="font-family:'Cormorant Garamond',serif; font-size:1.2rem; margin-bottom:0.5rem;">Late Arrivals</h4>
-          <p style="font-size:0.88rem;">Please arrive on time. If you're more than 15 minutes late I may need to shorten or reschedule your appointment.</p>
+          <h4 style="font-family:'Cormorant Garamond',serif; font-size:1.2rem; margin-bottom:0.5rem;" data-i18n="services.lateTitle">Late Arrivals</h4>
+          <p style="font-size:0.88rem;" data-i18n="services.lateP">Please arrive on time. If you're more than 15 minutes late I may need to shorten or reschedule your appointment.</p>
         </div>
 
       </div>
@@ -253,12 +251,12 @@
   ════════════════════════════════════════ -->
   <section class="section section--cream" aria-label="Booking call to action">
     <div class="container text-center">
-      <span class="section-eyebrow">Ready?</span>
-      <h2 style="margin-bottom:1rem;">Secure Your Slot Today</h2>
-      <p style="margin-inline:auto; margin-bottom:2rem;">
+      <span class="section-eyebrow" data-i18n="services.ctaEyebrow">Ready?</span>
+      <h2 style="margin-bottom:1rem;" data-i18n="services.ctaTitle">Secure Your Slot Today</h2>
+      <p style="margin-inline:auto; margin-bottom:2rem;" data-i18n="services.ctaP">
         Availability moves quickly — book online in under a minute.
       </p>
-      <a href="booking.html" class="btn btn--primary" style="font-size:0.9rem; padding:1rem 2.6rem;">
+      <a href="booking.html" class="btn btn--primary" style="font-size:0.9rem; padding:1rem 2.6rem;" data-i18n="services.ctaBtn">
         Book an Appointment
       </a>
     </div>
@@ -273,7 +271,7 @@
       <div class="footer__inner">
         <div class="footer__brand">
           <h3>Nails by <span>Kotomi</span></h3>
-          <p>Professional nail artistry in a private, welcoming studio. Every client, every set, every time.</p>
+          <p data-i18n="footer.tagline">Professional nail artistry in a private, welcoming studio. Every client, every set, every time.</p>
           <div class="footer__socials" aria-label="Social media links">
             <a href="#" class="footer__social-icon" aria-label="Instagram" rel="noopener">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -295,32 +293,33 @@
           </div>
         </div>
         <div class="footer__col">
-          <h4>Navigate</h4>
+          <h4 data-i18n="footer.navigate">Navigate</h4>
           <ul role="list">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
-            <li><a href="services.html">Services &amp; Pricing</a></li>
-            <li><a href="booking.html">Book an Appointment</a></li>
+            <li><a href="index.html" data-i18n="footer.home">Home</a></li>
+            <li><a href="gallery.html" data-i18n="footer.gallery">Gallery</a></li>
+            <li><a href="services.html" data-i18n="footer.servicesLink">Services &amp; Pricing</a></li>
+            <li><a href="booking.html" data-i18n="footer.bookLink">Book an Appointment</a></li>
           </ul>
         </div>
         <div class="footer__col">
-          <h4>Get in Touch</h4>
+          <h4 data-i18n="footer.contact">Get in Touch</h4>
           <ul role="list">
             <li>📍 London, UK</li>
             <li>📞 +44 (0) 000 000 0000</li>
             <li>✉️ hello@nailsbykotomi.com</li>
-            <li style="margin-top:0.5rem; font-size:0.8rem; opacity:0.6;">
+            <li style="margin-top:0.5rem; font-size:0.8rem; opacity:0.6;" data-i18n-html="footer.hours">
               Mon–Sat: 10:00 – 18:00<br />Sunday: By request
             </li>
           </ul>
         </div>
       </div>
       <p class="footer__bottom">
-        &copy; <span id="footer-year"></span> Nails by Kotomi. All rights reserved.
+        &copy; <span id="footer-year"></span> <span data-i18n="footer.copyright">Nails by Kotomi. All rights reserved.</span>
       </p>
     </div>
   </footer>
 
+  <script src="content.js"></script>
   <script src="script.js"></script>
 </body>
 </html>

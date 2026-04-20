@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -20,20 +20,32 @@
         Nails by <span>Kotomi</span>
       </a>
       <ul class="nav__links" role="list">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="gallery.html" class="active">Gallery</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="booking.html" class="btn btn--primary">Book Now</a></li>
+        <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+        <li><a href="gallery.html" class="active" data-i18n="nav.gallery">Gallery</a></li>
+        <li><a href="services.html" data-i18n="nav.services">Services</a></li>
+        <li><a href="booking.html" class="btn btn--primary" data-i18n="nav.bookNow">Book Now</a></li>
+        <li>
+          <button class="lang-toggle" aria-label="Switch language">
+            <span class="lang-toggle__en">EN</span>
+            <span class="lang-toggle__sep">·</span>
+            <span class="lang-toggle__ja">日本語</span>
+          </button>
+        </li>
       </ul>
       <button class="nav__toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
     </div>
     <div class="nav__mobile" id="nav-mobile" role="menu">
-      <a href="index.html" role="menuitem">Home</a>
-      <a href="gallery.html" role="menuitem">Gallery</a>
-      <a href="services.html" role="menuitem">Services &amp; Pricing</a>
-      <a href="booking.html" role="menuitem">Book an Appointment</a>
+      <a href="index.html" role="menuitem" data-i18n="nav.home">Home</a>
+      <a href="gallery.html" role="menuitem" data-i18n="nav.gallery">Gallery</a>
+      <a href="services.html" role="menuitem" data-i18n="nav.mobileServices">Services &amp; Pricing</a>
+      <a href="booking.html" role="menuitem" data-i18n="nav.mobileBook">Book an Appointment</a>
+      <button class="lang-toggle" aria-label="Switch language">
+        <span class="lang-toggle__en">EN</span>
+        <span class="lang-toggle__sep">·</span>
+        <span class="lang-toggle__ja">日本語</span>
+      </button>
     </div>
   </nav>
 
@@ -43,9 +55,9 @@
   ════════════════════════════════════════ -->
   <header class="page-hero cream-bg" aria-label="Gallery page header">
     <div class="container">
-      <span class="section-eyebrow">Portfolio</span>
-      <h1>The Gallery</h1>
-      <p>A curated collection of nail looks — from everyday elegance to statement artistry.</p>
+      <span class="section-eyebrow" data-i18n="gallery.heroEyebrow">Portfolio</span>
+      <h1 data-i18n="gallery.heroTitle">The Gallery</h1>
+      <p data-i18n="gallery.heroP">A curated collection of nail looks — from everyday elegance to statement artistry.</p>
     </div>
   </header>
 
@@ -58,26 +70,23 @@
 
       <h2 id="gallery-title" class="visually-hidden">Photo Gallery</h2>
 
-      <!-- Filter Buttons -->
       <div class="gallery-filters" role="group" aria-label="Filter gallery by category">
-        <button class="filter-btn active" data-filter="all" aria-pressed="true">All</button>
-        <button class="filter-btn" data-filter="gel" aria-pressed="false">Gel</button>
-        <button class="filter-btn" data-filter="acrylic" aria-pressed="false">Acrylic</button>
-        <button class="filter-btn" data-filter="nail-art" aria-pressed="false">Nail Art</button>
-        <button class="filter-btn" data-filter="pedicure" aria-pressed="false">Pedicures</button>
+        <button class="filter-btn active" data-filter="all" aria-pressed="true" data-i18n="gallery.filterAll">All</button>
+        <button class="filter-btn" data-filter="gel" aria-pressed="false" data-i18n="gallery.filterGel">Gel</button>
+        <button class="filter-btn" data-filter="acrylic" aria-pressed="false" data-i18n="gallery.filterAcrylic">Acrylic</button>
+        <button class="filter-btn" data-filter="nail-art" aria-pressed="false" data-i18n="gallery.filterArt">Nail Art</button>
+        <button class="filter-btn" data-filter="pedicure" aria-pressed="false" data-i18n="gallery.filterPedicure">Pedicures</button>
       </div>
 
-      <!-- Masonry Grid -->
-      <!-- Each item carries a data-category for JS filtering and a data-label for the lightbox caption -->
       <div class="gallery-masonry" id="gallery-grid" role="list" aria-label="Gallery images">
 
         <div class="gallery-item" data-category="gel" role="listitem">
           <div class="img-placeholder"
                data-index="0"
                data-label="Gel Manicure — Soft Blush"
-               tabindex="0"
-               role="button"
-               aria-label="View Gel Manicure – Soft Blush">
+               data-i18n="gallery.i0t"
+               data-i18n-label="gallery.i0l"
+               tabindex="0" role="button" aria-label="View Gel Manicure – Soft Blush">
             Gel · Soft Blush
           </div>
         </div>
@@ -86,9 +95,9 @@
           <div class="img-placeholder"
                data-index="1"
                data-label="Nail Art — Floral Impressions"
-               tabindex="0"
-               role="button"
-               aria-label="View Nail Art – Floral Impressions">
+               data-i18n="gallery.i1t"
+               data-i18n-label="gallery.i1l"
+               tabindex="0" role="button" aria-label="View Nail Art – Floral Impressions">
             Nail Art · Floral
           </div>
         </div>
@@ -97,9 +106,9 @@
           <div class="img-placeholder"
                data-index="2"
                data-label="Acrylic Full Set — Nude Square"
-               tabindex="0"
-               role="button"
-               aria-label="View Acrylic Full Set – Nude Square">
+               data-i18n="gallery.i2t"
+               data-i18n-label="gallery.i2l"
+               tabindex="0" role="button" aria-label="View Acrylic Full Set – Nude Square">
             Acrylic · Nude Square
           </div>
         </div>
@@ -108,9 +117,9 @@
           <div class="img-placeholder"
                data-index="3"
                data-label="Pedicure — Classic Red"
-               tabindex="0"
-               role="button"
-               aria-label="View Pedicure – Classic Red">
+               data-i18n="gallery.i3t"
+               data-i18n-label="gallery.i3l"
+               tabindex="0" role="button" aria-label="View Pedicure – Classic Red">
             Pedicure · Classic Red
           </div>
         </div>
@@ -119,9 +128,9 @@
           <div class="img-placeholder"
                data-index="4"
                data-label="Gel Manicure — Milky White"
-               tabindex="0"
-               role="button"
-               aria-label="View Gel Manicure – Milky White">
+               data-i18n="gallery.i4t"
+               data-i18n-label="gallery.i4l"
+               tabindex="0" role="button" aria-label="View Gel Manicure – Milky White">
             Gel · Milky White
           </div>
         </div>
@@ -130,9 +139,9 @@
           <div class="img-placeholder"
                data-index="5"
                data-label="Nail Art — Abstract Marble"
-               tabindex="0"
-               role="button"
-               aria-label="View Nail Art – Abstract Marble">
+               data-i18n="gallery.i5t"
+               data-i18n-label="gallery.i5l"
+               tabindex="0" role="button" aria-label="View Nail Art – Abstract Marble">
             Nail Art · Marble
           </div>
         </div>
@@ -141,9 +150,9 @@
           <div class="img-placeholder"
                data-index="6"
                data-label="Acrylic — Ombre Pink to White"
-               tabindex="0"
-               role="button"
-               aria-label="View Acrylic – Ombre Pink to White">
+               data-i18n="gallery.i6t"
+               data-i18n-label="gallery.i6l"
+               tabindex="0" role="button" aria-label="View Acrylic – Ombre Pink to White">
             Acrylic · Ombre
           </div>
         </div>
@@ -152,9 +161,9 @@
           <div class="img-placeholder"
                data-index="7"
                data-label="Gel Manicure — Deep Berry"
-               tabindex="0"
-               role="button"
-               aria-label="View Gel Manicure – Deep Berry">
+               data-i18n="gallery.i7t"
+               data-i18n-label="gallery.i7l"
+               tabindex="0" role="button" aria-label="View Gel Manicure – Deep Berry">
             Gel · Deep Berry
           </div>
         </div>
@@ -163,9 +172,9 @@
           <div class="img-placeholder"
                data-index="8"
                data-label="Pedicure — Nude &amp; Gold Foil"
-               tabindex="0"
-               role="button"
-               aria-label="View Pedicure – Nude and Gold Foil">
+               data-i18n="gallery.i8t"
+               data-i18n-label="gallery.i8l"
+               tabindex="0" role="button" aria-label="View Pedicure – Nude and Gold Foil">
             Pedicure · Nude &amp; Gold
           </div>
         </div>
@@ -174,9 +183,9 @@
           <div class="img-placeholder"
                data-index="9"
                data-label="Nail Art — Botanical Line Work"
-               tabindex="0"
-               role="button"
-               aria-label="View Nail Art – Botanical Line Work">
+               data-i18n="gallery.i9t"
+               data-i18n-label="gallery.i9l"
+               tabindex="0" role="button" aria-label="View Nail Art – Botanical Line Work">
             Nail Art · Botanical
           </div>
         </div>
@@ -185,9 +194,9 @@
           <div class="img-placeholder"
                data-index="10"
                data-label="Acrylic — Clear Coffin"
-               tabindex="0"
-               role="button"
-               aria-label="View Acrylic – Clear Coffin">
+               data-i18n="gallery.i10t"
+               data-i18n-label="gallery.i10l"
+               tabindex="0" role="button" aria-label="View Acrylic – Clear Coffin">
             Acrylic · Clear Coffin
           </div>
         </div>
@@ -196,18 +205,16 @@
           <div class="img-placeholder"
                data-index="11"
                data-label="Gel Manicure — French Tips"
-               tabindex="0"
-               role="button"
-               aria-label="View Gel Manicure – French Tips">
+               data-i18n="gallery.i11t"
+               data-i18n-label="gallery.i11l"
+               tabindex="0" role="button" aria-label="View Gel Manicure – French Tips">
             Gel · French Tips
           </div>
         </div>
 
       </div>
-      <!-- /gallery-masonry -->
 
-      <!-- Empty state (shown when no items match filter) -->
-      <p class="text-center" id="gallery-empty" style="display:none; padding:3rem 0; color:var(--text-muted); font-style:italic;">
+      <p class="text-center" id="gallery-empty" style="display:none; padding:3rem 0; color:var(--text-muted); font-style:italic;" data-i18n="gallery.empty">
         No images in this category yet — check back soon!
       </p>
 
@@ -220,12 +227,12 @@
   ════════════════════════════════════════ -->
   <section class="section" aria-label="Booking call to action">
     <div class="container text-center">
-      <span class="section-eyebrow">Love what you see?</span>
-      <h2 style="margin-bottom:1rem;">Let's Create Your Perfect Set</h2>
-      <p style="margin-inline:auto; margin-bottom:2rem;">
+      <span class="section-eyebrow" data-i18n="gallery.ctaEyebrow">Love what you see?</span>
+      <h2 style="margin-bottom:1rem;" data-i18n="gallery.ctaTitle">Let's Create Your Perfect Set</h2>
+      <p style="margin-inline:auto; margin-bottom:2rem;" data-i18n="gallery.ctaP">
         Each look is fully bespoke — bring your inspo pics and we'll make it happen.
       </p>
-      <a href="booking.html" class="btn btn--primary">Book an Appointment</a>
+      <a href="booking.html" class="btn btn--primary" data-i18n="gallery.ctaBtn">Book an Appointment</a>
     </div>
   </section>
 
@@ -238,7 +245,7 @@
       <div class="footer__inner">
         <div class="footer__brand">
           <h3>Nails by <span>Kotomi</span></h3>
-          <p>Professional nail artistry in a private, welcoming studio. Every client, every set, every time.</p>
+          <p data-i18n="footer.tagline">Professional nail artistry in a private, welcoming studio. Every client, every set, every time.</p>
           <div class="footer__socials" aria-label="Social media links">
             <a href="#" class="footer__social-icon" aria-label="Instagram" rel="noopener">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -260,28 +267,28 @@
           </div>
         </div>
         <div class="footer__col">
-          <h4>Navigate</h4>
+          <h4 data-i18n="footer.navigate">Navigate</h4>
           <ul role="list">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
-            <li><a href="services.html">Services &amp; Pricing</a></li>
-            <li><a href="booking.html">Book an Appointment</a></li>
+            <li><a href="index.html" data-i18n="footer.home">Home</a></li>
+            <li><a href="gallery.html" data-i18n="footer.gallery">Gallery</a></li>
+            <li><a href="services.html" data-i18n="footer.servicesLink">Services &amp; Pricing</a></li>
+            <li><a href="booking.html" data-i18n="footer.bookLink">Book an Appointment</a></li>
           </ul>
         </div>
         <div class="footer__col">
-          <h4>Get in Touch</h4>
+          <h4 data-i18n="footer.contact">Get in Touch</h4>
           <ul role="list">
             <li>📍 London, UK</li>
             <li>📞 +44 (0) 000 000 0000</li>
             <li>✉️ hello@nailsbykotomi.com</li>
-            <li style="margin-top:0.5rem; font-size:0.8rem; opacity:0.6;">
+            <li style="margin-top:0.5rem; font-size:0.8rem; opacity:0.6;" data-i18n-html="footer.hours">
               Mon–Sat: 10:00 – 18:00<br />Sunday: By request
             </li>
           </ul>
         </div>
       </div>
       <p class="footer__bottom">
-        &copy; <span id="footer-year"></span> Nails by Kotomi. All rights reserved.
+        &copy; <span id="footer-year"></span> <span data-i18n="footer.copyright">Nails by Kotomi. All rights reserved.</span>
       </p>
     </div>
   </footer>
@@ -292,7 +299,6 @@
   ════════════════════════════════════════ -->
   <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image lightbox">
     <div class="lightbox__content" id="lightbox-content">
-      <!-- Caption injected by JS -->
       <button class="lightbox__close" id="lightbox-close" aria-label="Close lightbox">&times;</button>
       <button class="lightbox__nav lightbox__prev" id="lightbox-prev" aria-label="Previous image">&#8592;</button>
       <button class="lightbox__nav lightbox__next" id="lightbox-next" aria-label="Next image">&#8594;</button>
@@ -301,6 +307,7 @@
     </div>
   </div>
 
+  <script src="content.js"></script>
   <script src="script.js"></script>
 </body>
 </html>

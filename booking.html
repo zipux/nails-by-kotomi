@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -20,20 +20,32 @@
         Nails by <span>Kotomi</span>
       </a>
       <ul class="nav__links" role="list">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="booking.html" class="btn btn--primary active">Book Now</a></li>
+        <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+        <li><a href="gallery.html" data-i18n="nav.gallery">Gallery</a></li>
+        <li><a href="services.html" data-i18n="nav.services">Services</a></li>
+        <li><a href="booking.html" class="btn btn--primary active" data-i18n="nav.bookNow">Book Now</a></li>
+        <li>
+          <button class="lang-toggle" aria-label="Switch language">
+            <span class="lang-toggle__en">EN</span>
+            <span class="lang-toggle__sep">·</span>
+            <span class="lang-toggle__ja">日本語</span>
+          </button>
+        </li>
       </ul>
       <button class="nav__toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
     </div>
     <div class="nav__mobile" id="nav-mobile" role="menu">
-      <a href="index.html" role="menuitem">Home</a>
-      <a href="gallery.html" role="menuitem">Gallery</a>
-      <a href="services.html" role="menuitem">Services &amp; Pricing</a>
-      <a href="booking.html" role="menuitem">Book an Appointment</a>
+      <a href="index.html" role="menuitem" data-i18n="nav.home">Home</a>
+      <a href="gallery.html" role="menuitem" data-i18n="nav.gallery">Gallery</a>
+      <a href="services.html" role="menuitem" data-i18n="nav.mobileServices">Services &amp; Pricing</a>
+      <a href="booking.html" role="menuitem" data-i18n="nav.mobileBook">Book an Appointment</a>
+      <button class="lang-toggle" aria-label="Switch language">
+        <span class="lang-toggle__en">EN</span>
+        <span class="lang-toggle__sep">·</span>
+        <span class="lang-toggle__ja">日本語</span>
+      </button>
     </div>
   </nav>
 
@@ -43,9 +55,9 @@
   ════════════════════════════════════════ -->
   <header class="page-hero" aria-label="Booking page header">
     <div class="container">
-      <span class="section-eyebrow">Online Booking</span>
-      <h1>Book Your Appointment</h1>
-      <p>Choose a service, pick a time, and leave the rest to me.</p>
+      <span class="section-eyebrow" data-i18n="booking.heroEyebrow">Online Booking</span>
+      <h1 data-i18n="booking.heroTitle">Book Your Appointment</h1>
+      <p data-i18n="booking.heroP">Choose a service, pick a time, and leave the rest to me.</p>
     </div>
   </header>
 
@@ -56,11 +68,10 @@
   <section class="section" aria-labelledby="booking-title">
     <div class="container">
 
-      <!-- Intro -->
       <div class="booking-intro">
-        <span class="section-eyebrow">Let's get you booked in</span>
-        <h2 id="booking-title" style="margin-bottom:1rem;">Reserve Your Slot</h2>
-        <p>
+        <span class="section-eyebrow" data-i18n="booking.sectionEyebrow">Let's get you booked in</span>
+        <h2 id="booking-title" style="margin-bottom:1rem;" data-i18n="booking.sectionTitle">Reserve Your Slot</h2>
+        <p data-i18n-html="booking.sectionP">
           I'd love to have you in the studio! Use the calendar below to find a
           time that works for you. If you have any questions before booking,
           feel free to reach out at
@@ -71,15 +82,10 @@
         </p>
       </div>
 
-      <!-- ── Cal.com Inline Embed ──
-           Replace KOTOMI_CAL_USERNAME with the real Cal.com username when ready.
-           The embed script targets the #cal-embed div below.
-      ── -->
       <div id="cal-embed" class="loading" aria-label="Appointment booking calendar" aria-live="polite">
         Loading calendar&hellip;
       </div>
 
-      <!-- Cal.com embed initialisation -->
       <script>
         (function (C, A, L) {
           let p = function (a, ar) { a.q.push(ar); };
@@ -111,19 +117,14 @@
           };
         })(window, "https://app.cal.com/embed/embed.js", "init");
 
-        /* Initialise Cal.com — swap KOTOMI_CAL_USERNAME for the real username */
         Cal("init", { origin: "https://cal.com" });
-
         Cal("inline", {
           elementOrSelector: "#cal-embed",
           calLink: "KOTOMI_CAL_USERNAME",
           layout: "month_view"
         });
-
         Cal("ui", {
-          styles: {
-            branding: { brandColor: "#f2a7bb" }
-          },
+          styles: { branding: { brandColor: "#8c4f63" } },
           hideEventTypeDetails: false
         });
       </script>
@@ -139,35 +140,35 @@
     <div class="container">
 
       <header class="section-header">
-        <span class="section-eyebrow">Your Visit</span>
-        <h2 id="expect-title">What to Expect</h2>
-        <p>A warm, relaxed experience from the moment you walk through the door.</p>
+        <span class="section-eyebrow" data-i18n="booking.expectEyebrow">Your Visit</span>
+        <h2 id="expect-title" data-i18n="booking.expectTitle">What to Expect</h2>
+        <p data-i18n="booking.expectP">A warm, relaxed experience from the moment you walk through the door.</p>
       </header>
 
       <div style="display:grid; grid-template-columns:repeat(4,1fr); gap:1.5rem;">
 
         <div style="text-align:center; padding:2rem 1.5rem; background:var(--white); border-radius:var(--radius); box-shadow:var(--shadow);">
           <div style="font-size:1.8rem; margin-bottom:0.75rem;" aria-hidden="true">💬</div>
-          <h4 style="font-family:'Cormorant Garamond',serif; font-size:1.1rem; margin-bottom:0.5rem;">Consultation</h4>
-          <p style="font-size:0.85rem;">We'll chat about your nail goals, inspo and any concerns before we start.</p>
+          <h4 style="font-family:'Cormorant Garamond',serif; font-size:1.1rem; margin-bottom:0.5rem;" data-i18n="booking.step1title">Consultation</h4>
+          <p style="font-size:0.85rem;" data-i18n="booking.step1p">We'll chat about your nail goals, inspo and any concerns before we start.</p>
         </div>
 
         <div style="text-align:center; padding:2rem 1.5rem; background:var(--white); border-radius:var(--radius); box-shadow:var(--shadow);">
           <div style="font-size:1.8rem; margin-bottom:0.75rem;" aria-hidden="true">🌿</div>
-          <h4 style="font-family:'Cormorant Garamond',serif; font-size:1.1rem; margin-bottom:0.5rem;">Nail Prep</h4>
-          <p style="font-size:0.85rem;">Thorough cuticle care, shaping and surface prep for the best possible finish.</p>
+          <h4 style="font-family:'Cormorant Garamond',serif; font-size:1.1rem; margin-bottom:0.5rem;" data-i18n="booking.step2title">Nail Prep</h4>
+          <p style="font-size:0.85rem;" data-i18n="booking.step2p">Thorough cuticle care, shaping and surface prep for the best possible finish.</p>
         </div>
 
         <div style="text-align:center; padding:2rem 1.5rem; background:var(--white); border-radius:var(--radius); box-shadow:var(--shadow);">
           <div style="font-size:1.8rem; margin-bottom:0.75rem;" aria-hidden="true">🎨</div>
-          <h4 style="font-family:'Cormorant Garamond',serif; font-size:1.1rem; margin-bottom:0.5rem;">Application</h4>
-          <p style="font-size:0.85rem;">Precision application of your chosen service, colour and any nail art extras.</p>
+          <h4 style="font-family:'Cormorant Garamond',serif; font-size:1.1rem; margin-bottom:0.5rem;" data-i18n="booking.step3title">Application</h4>
+          <p style="font-size:0.85rem;" data-i18n="booking.step3p">Precision application of your chosen service, colour and any nail art extras.</p>
         </div>
 
         <div style="text-align:center; padding:2rem 1.5rem; background:var(--white); border-radius:var(--radius); box-shadow:var(--shadow);">
           <div style="font-size:1.8rem; margin-bottom:0.75rem;" aria-hidden="true">✨</div>
-          <h4 style="font-family:'Cormorant Garamond',serif; font-size:1.1rem; margin-bottom:0.5rem;">Finish &amp; Glow</h4>
-          <p style="font-size:0.85rem;">Nourishing oil, final inspection, and you're ready to show off your new set.</p>
+          <h4 style="font-family:'Cormorant Garamond',serif; font-size:1.1rem; margin-bottom:0.5rem;" data-i18n="booking.step4title">Finish &amp; Glow</h4>
+          <p style="font-size:0.85rem;" data-i18n="booking.step4p">Nourishing oil, final inspection, and you're ready to show off your new set.</p>
         </div>
 
       </div>
@@ -183,53 +184,49 @@
     <div class="container">
 
       <header class="section-header">
-        <span class="section-eyebrow">Questions</span>
-        <h2 id="faq-title">Frequently Asked</h2>
+        <span class="section-eyebrow" data-i18n="booking.faqEyebrow">Questions</span>
+        <h2 id="faq-title" data-i18n="booking.faqTitle">Frequently Asked</h2>
       </header>
 
       <div style="max-width:720px; margin-inline:auto; display:flex; flex-direction:column; gap:1rem;">
 
         <details class="faq-item" style="background:var(--white); border-radius:var(--radius); box-shadow:var(--shadow); overflow:hidden;">
           <summary style="padding:1.5rem; cursor:pointer; font-family:'Cormorant Garamond',serif; font-size:1.15rem; list-style:none; display:flex; justify-content:space-between; align-items:center; gap:1rem;">
-            How long does a gel manicure take?
+            <span data-i18n="booking.faq1q">How long does a gel manicure take?</span>
             <span style="color:var(--pink); font-size:1.4rem; flex-shrink:0; line-height:1;">+</span>
           </summary>
-          <p style="padding:0 1.5rem 1.5rem; font-size:0.9rem; margin:0; max-width:unset;">
-            A standard gel manicure takes approximately 60–75 minutes, including nail prep,
-            colour application and LED curing. Adding nail art may extend the appointment.
+          <p style="padding:0 1.5rem 1.5rem; font-size:0.9rem; margin:0; max-width:unset;" data-i18n="booking.faq1a">
+            A standard gel manicure takes approximately 60–75 minutes, including nail prep, colour application and LED curing. Adding nail art may extend the appointment.
           </p>
         </details>
 
         <details class="faq-item" style="background:var(--white); border-radius:var(--radius); box-shadow:var(--shadow); overflow:hidden;">
           <summary style="padding:1.5rem; cursor:pointer; font-family:'Cormorant Garamond',serif; font-size:1.15rem; list-style:none; display:flex; justify-content:space-between; align-items:center; gap:1rem;">
-            Do I need to do anything before my appointment?
+            <span data-i18n="booking.faq2q">Do I need to do anything before my appointment?</span>
             <span style="color:var(--pink); font-size:1.4rem; flex-shrink:0; line-height:1;">+</span>
           </summary>
-          <p style="padding:0 1.5rem 1.5rem; font-size:0.9rem; margin:0; max-width:unset;">
-            Please arrive with clean nails — remove any existing polish or gel at home if possible.
-            Avoid applying hand cream on the day, as it can affect adhesion. That's all!
+          <p style="padding:0 1.5rem 1.5rem; font-size:0.9rem; margin:0; max-width:unset;" data-i18n="booking.faq2a">
+            Please arrive with clean nails — remove any existing polish or gel at home if possible. Avoid applying hand cream on the day, as it can affect adhesion. That's all!
           </p>
         </details>
 
         <details class="faq-item" style="background:var(--white); border-radius:var(--radius); box-shadow:var(--shadow); overflow:hidden;">
           <summary style="padding:1.5rem; cursor:pointer; font-family:'Cormorant Garamond',serif; font-size:1.15rem; list-style:none; display:flex; justify-content:space-between; align-items:center; gap:1rem;">
-            Can I bring my own nail colour?
+            <span data-i18n="booking.faq3q">Can I bring my own nail colour?</span>
             <span style="color:var(--pink); font-size:1.4rem; flex-shrink:0; line-height:1;">+</span>
           </summary>
-          <p style="padding:0 1.5rem 1.5rem; font-size:0.9rem; margin:0; max-width:unset;">
-            Yes! You're welcome to bring your own gel or regular polish. Please let me know in
-            advance so I can check compatibility with the products I use.
+          <p style="padding:0 1.5rem 1.5rem; font-size:0.9rem; margin:0; max-width:unset;" data-i18n="booking.faq3a">
+            Yes! You're welcome to bring your own gel or regular polish. Please let me know in advance so I can check compatibility with the products I use.
           </p>
         </details>
 
         <details class="faq-item" style="background:var(--white); border-radius:var(--radius); box-shadow:var(--shadow); overflow:hidden;">
           <summary style="padding:1.5rem; cursor:pointer; font-family:'Cormorant Garamond',serif; font-size:1.15rem; list-style:none; display:flex; justify-content:space-between; align-items:center; gap:1rem;">
-            What if I need to cancel or reschedule?
+            <span data-i18n="booking.faq4q">What if I need to cancel or reschedule?</span>
             <span style="color:var(--pink); font-size:1.4rem; flex-shrink:0; line-height:1;">+</span>
           </summary>
-          <p style="padding:0 1.5rem 1.5rem; font-size:0.9rem; margin:0; max-width:unset;">
-            No problem — life happens! Please give at least 24 hours' notice via the booking
-            system or by email. Cancellations with less than 24 hours' notice may incur a 50% charge.
+          <p style="padding:0 1.5rem 1.5rem; font-size:0.9rem; margin:0; max-width:unset;" data-i18n="booking.faq4a">
+            No problem — life happens! Please give at least 24 hours' notice via the booking system or by email. Cancellations with less than 24 hours' notice may incur a 50% charge.
           </p>
         </details>
 
@@ -247,7 +244,7 @@
       <div class="footer__inner">
         <div class="footer__brand">
           <h3>Nails by <span>Kotomi</span></h3>
-          <p>Professional nail artistry in a private, welcoming studio. Every client, every set, every time.</p>
+          <p data-i18n="footer.tagline">Professional nail artistry in a private, welcoming studio. Every client, every set, every time.</p>
           <div class="footer__socials" aria-label="Social media links">
             <a href="#" class="footer__social-icon" aria-label="Instagram" rel="noopener">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -269,32 +266,33 @@
           </div>
         </div>
         <div class="footer__col">
-          <h4>Navigate</h4>
+          <h4 data-i18n="footer.navigate">Navigate</h4>
           <ul role="list">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
-            <li><a href="services.html">Services &amp; Pricing</a></li>
-            <li><a href="booking.html">Book an Appointment</a></li>
+            <li><a href="index.html" data-i18n="footer.home">Home</a></li>
+            <li><a href="gallery.html" data-i18n="footer.gallery">Gallery</a></li>
+            <li><a href="services.html" data-i18n="footer.servicesLink">Services &amp; Pricing</a></li>
+            <li><a href="booking.html" data-i18n="footer.bookLink">Book an Appointment</a></li>
           </ul>
         </div>
         <div class="footer__col">
-          <h4>Get in Touch</h4>
+          <h4 data-i18n="footer.contact">Get in Touch</h4>
           <ul role="list">
             <li>📍 London, UK</li>
             <li>📞 +44 (0) 000 000 0000</li>
             <li>✉️ hello@nailsbykotomi.com</li>
-            <li style="margin-top:0.5rem; font-size:0.8rem; opacity:0.6;">
+            <li style="margin-top:0.5rem; font-size:0.8rem; opacity:0.6;" data-i18n-html="footer.hours">
               Mon–Sat: 10:00 – 18:00<br />Sunday: By request
             </li>
           </ul>
         </div>
       </div>
       <p class="footer__bottom">
-        &copy; <span id="footer-year"></span> Nails by Kotomi. All rights reserved.
+        &copy; <span id="footer-year"></span> <span data-i18n="footer.copyright">Nails by Kotomi. All rights reserved.</span>
       </p>
     </div>
   </footer>
 
+  <script src="content.js"></script>
   <script src="script.js"></script>
 </body>
 </html>

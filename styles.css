@@ -1083,6 +1083,49 @@ p {
   }
 }
 
+/* ── Language Toggle ── */
+.lang-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  background: none;
+  border: 1px solid var(--nude);
+  border-radius: 50px;
+  padding: 0.32rem 0.85rem;
+  font-family: 'Lato', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+  color: var(--text-muted);
+  transition: border-color var(--transition), color var(--transition);
+  white-space: nowrap;
+}
+
+.lang-toggle:hover {
+  border-color: var(--gold);
+  color: var(--text);
+}
+
+.lang-toggle__en,
+.lang-toggle__ja {
+  transition: color var(--transition);
+}
+
+.lang-toggle__sep {
+  opacity: 0.4;
+}
+
+[data-lang="en"] .lang-toggle__en,
+[data-lang="ja"] .lang-toggle__ja {
+  color: var(--gold);
+}
+
+.nav__mobile .lang-toggle {
+  align-self: flex-start;
+  margin-top: 0.5rem;
+}
+
 /* ── Utility ── */
 .text-center { text-align: center; }
 .mt-1 { margin-top: 0.5rem; }

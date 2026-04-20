@@ -1,6 +1,7 @@
 /* ============================================================
    Nails by Kotomi — script.js
    Handles:
+     - Bilingual i18n (EN / JA) via content.js
      - Sticky nav shadow on scroll
      - Mobile hamburger menu
      - Active nav link highlighting
@@ -21,6 +22,7 @@
   /* ── DOM Ready ───────────────────────────────────────────── */
 
   document.addEventListener('DOMContentLoaded', () => {
+    initI18n();
     initNav();
     initFooterYear();
     setActiveNavLink();
@@ -36,6 +38,52 @@
       initCalEmbed();
     }
   });
+
+
+  /* ══════════════════════════════════════════════════════════
+     I18N — bilingual content switching
+  ══════════════════════════════════════════════════════════ */
+
+  function getDeep(obj, path) {
+    return path.split('.').reduce((o, k) => (o != null ? o[k] : undefined), obj);
+  }
+
+  function applyLanguage(lang) {
+    if (!window.CONTENT || !CONTENT[lang]) return;
+    const C = CONTENT[lang];
+
+    document.documentElement.lang = lang;
+    document.documentElement.dataset.lang = lang;
+
+    $$('[data-i18n]').forEach(el => {
+      const val = getDeep(C, el.dataset.i18n);
+      if (val !== undefined) el.textContent = val;
+    });
+
+    $$('[data-i18n-html]').forEach(el => {
+      const val = getDeep(C, el.dataset.i18nHtml);
+      if (val !== undefined) el.innerHTML = val;
+    });
+
+    $$('[data-i18n-label]').forEach(el => {
+      const val = getDeep(C, el.dataset.i18nLabel);
+      if (val !== undefined) el.dataset.label = val;
+    });
+  }
+
+  function initI18n() {
+    const saved = localStorage.getItem('nbk-lang') || 'en';
+    applyLanguage(saved);
+
+    $$('.lang-toggle').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const current = document.documentElement.dataset.lang || 'en';
+        const next = current === 'en' ? 'ja' : 'en';
+        applyLanguage(next);
+        localStorage.setItem('nbk-lang', next);
+      });
+    });
+  }
 
 
   /* ══════════════════════════════════════════════════════════
