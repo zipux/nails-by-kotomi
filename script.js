@@ -49,7 +49,7 @@
   }
 
   function applyLanguage(lang) {
-    if (!window.CONTENT || !CONTENT[lang]) return;
+    if (typeof CONTENT === 'undefined' || !CONTENT[lang]) return;
     const C = CONTENT[lang];
 
     document.documentElement.lang = lang;
