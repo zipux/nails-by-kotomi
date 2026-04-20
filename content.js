@@ -203,7 +203,7 @@ window.CONTENT = {
 
       sectionEyebrow: "Let's get you booked in",
       sectionTitle:   'Reserve Your Slot',
-      sectionP:       'I\'d love to have you in the studio! Use the calendar below to find a time that works for you. If you have any questions before booking, feel free to reach out at <a href="mailto:hello@nailsbykotomi.com" style="color:var(--pink);text-decoration:underline;text-underline-offset:3px;">hello@nailsbykotomi.com</a>.',
+      sectionP:       'Use the calendar below to find a time that works for you. If you have any questions before booking, feel free to reach out at <a href="mailto:hello@nailsbykotomi.com" style="color:var(--pink);text-decoration:underline;text-underline-offset:3px;">hello@nailsbykotomi.com</a>!',
 
       expectEyebrow: 'Your Visit',
       expectTitle:   'What to Expect',
