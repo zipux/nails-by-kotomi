@@ -61,7 +61,7 @@
        HERO
   ════════════════════════════════════════ -->
   <section class="hero" aria-label="Hero">
-    <div class="hero__bg" role="img" aria-label="Nail art background"></div>
+    <div class="hero__bg" role="img" aria-label="Nail art background" style="background-image: url('images/hero.webp');"></div>
     <div class="hero__overlay" aria-hidden="true"></div>
 
     <div class="hero__content">
@@ -94,12 +94,12 @@
       </header>
 
       <div class="gallery-preview__grid" role="list" aria-label="Gallery preview">
-        <div class="img-placeholder" role="listitem" style="aspect-ratio:1/1" data-i18n="home.gItem0">Gel Manicure</div>
-        <div class="img-placeholder" role="listitem" style="aspect-ratio:1/1" data-i18n="home.gItem1">Nail Art</div>
-        <div class="img-placeholder" role="listitem" style="aspect-ratio:1/1" data-i18n="home.gItem2">Acrylic Set</div>
-        <div class="img-placeholder" role="listitem" style="aspect-ratio:1/1" data-i18n="home.gItem3">Ombre Design</div>
-        <div class="img-placeholder" role="listitem" style="aspect-ratio:1/1" data-i18n="home.gItem4">French Tips</div>
-        <div class="img-placeholder" role="listitem" style="aspect-ratio:1/1" data-i18n="home.gItem5">Pedicure</div>
+        <div class="img-placeholder" role="listitem" style="aspect-ratio:1/1; background-image:url('images/preview-1.webp'); background-size:cover; background-position:center;" data-i18n="home.gItem0">Gel Manicure</div>
+        <div class="img-placeholder" role="listitem" style="aspect-ratio:1/1; background-image:url('images/preview-2.webp'); background-size:cover; background-position:center;" data-i18n="home.gItem1">Nail Art</div>
+        <div class="img-placeholder" role="listitem" style="aspect-ratio:1/1; background-image:url('images/preview-3.webp'); background-size:cover; background-position:center;" data-i18n="home.gItem2">Acrylic Set</div>
+        <div class="img-placeholder" role="listitem" style="aspect-ratio:1/1; background-image:url('images/preview-4.webp'); background-size:cover; background-position:center;" data-i18n="home.gItem3">Ombre Design</div>
+        <div class="img-placeholder" role="listitem" style="aspect-ratio:1/1; background-image:url('images/preview-5.webp'); background-size:cover; background-position:center;" data-i18n="home.gItem4">French Tips</div>
+        <div class="img-placeholder" role="listitem" style="aspect-ratio:1/1; background-image:url('images/preview-6.webp'); background-size:cover; background-position:center;" data-i18n="home.gItem5">Pedicure</div>
       </div>
 
       <div class="text-center mt-3" style="margin-top:2.5rem;">
@@ -118,9 +118,8 @@
       <div class="about__inner">
 
         <div class="about__image">
-          <div class="img-placeholder" style="aspect-ratio:4/5; width:100%; min-height:360px;">
-            Kotomi's Portrait
-          </div>
+          <img src="images/portrait.webp" alt="Kotomi — nail technician" style="aspect-ratio:4/5; width:100%; object-fit:cover; border-radius:var(--radius);" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+          <div class="img-placeholder" style="aspect-ratio:4/5; width:100%; min-height:360px; display:none;">Kotomi's Portrait</div>
         </div>
 
         <div class="about__text">

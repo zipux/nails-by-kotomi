@@ -215,6 +215,14 @@ p {
   background-position: center;
 }
 
+.img-placeholder[style*="background-image"] {
+  color: transparent;
+}
+
+.img-placeholder[style*="background-image"]::before {
+  display: none;
+}
+
 .img-placeholder:hover {
   transform: translateY(-4px);
   box-shadow: var(--shadow-hover);
