@@ -49,8 +49,8 @@
   }
 
   function applyLanguage(lang) {
-    if (typeof CONTENT === 'undefined' || !CONTENT[lang]) return;
-    const C = CONTENT[lang];
+    if (!window.CONTENT || !window.CONTENT[lang]) return;
+    const C = window.CONTENT[lang];
 
     document.documentElement.lang = lang;
     document.documentElement.dataset.lang = lang;
