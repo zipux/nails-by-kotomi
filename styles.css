@@ -1087,38 +1087,56 @@ p {
 .lang-toggle {
   display: inline-flex;
   align-items: center;
-  gap: 0.35rem;
+  gap: 0.5rem;
   background: none;
-  border: 1px solid var(--nude);
-  border-radius: 50px;
-  padding: 0.32rem 0.85rem;
+  border: none;
+  padding: 0;
   font-family: 'Lato', sans-serif;
   font-size: 0.72rem;
   font-weight: 700;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.12em;
   cursor: pointer;
   color: var(--text-muted);
-  transition: border-color var(--transition), color var(--transition);
   white-space: nowrap;
-}
-
-.lang-toggle:hover {
-  border-color: var(--gold);
-  color: var(--text);
 }
 
 .lang-toggle__en,
 .lang-toggle__ja {
+  position: relative;
+  padding-bottom: 2px;
   transition: color var(--transition);
 }
 
-.lang-toggle__sep {
-  opacity: 0.4;
+.lang-toggle__en::after,
+.lang-toggle__ja::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1.5px;
+  background-color: var(--gold);
+  transition: width var(--transition);
 }
 
 [data-lang="en"] .lang-toggle__en,
 [data-lang="ja"] .lang-toggle__ja {
-  color: var(--gold);
+  color: var(--text);
+}
+
+[data-lang="en"] .lang-toggle__en::after,
+[data-lang="ja"] .lang-toggle__ja::after {
+  width: 100%;
+}
+
+.lang-toggle__sep {
+  opacity: 0.25;
+  font-weight: 300;
+}
+
+.lang-toggle:hover .lang-toggle__en,
+.lang-toggle:hover .lang-toggle__ja {
+  color: var(--text);
 }
 
 .nav__mobile .lang-toggle {
