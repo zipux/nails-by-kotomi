@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Kotomi — Nail artist specialising in gel, acrylics, manicure, and pedicure in Vancouver.">
+  <title>Kotomi — Nail Artist</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Sidebar (desktop) -->
+  <aside class="sidebar" role="navigation" aria-label="Main navigation">
+    <a href="index.html" class="sidebar-brand">Kotomi</a>
+    <nav class="sidebar-nav">
+      <a href="index.html"   class="nav-link" data-page="home">Home</a>
+      <a href="works.html"   class="nav-link" data-page="works">Works</a>
+      <a href="booking.html" class="nav-link" data-page="booking">Booking</a>
+    </nav>
+    <div class="sidebar-footer">
+      <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="sidebar-social">Instagram</a>
+      <a href="mailto:koto@gmail.com" class="sidebar-social">koto@gmail.com</a>
+    </div>
+  </aside>
+
+  <!-- Mobile Header -->
+  <header class="mobile-header">
+    <a href="index.html" class="mobile-brand">Kotomi</a>
+    <button class="hamburger-btn" id="hamburgerBtn"
+            aria-label="Open navigation" aria-expanded="false" aria-controls="navOverlay">
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+    </button>
+  </header>
+
+  <!-- Mobile Nav Overlay -->
+  <div class="nav-overlay" id="navOverlay"
+       role="dialog" aria-modal="true" aria-label="Navigation" aria-hidden="true">
+    <nav class="overlay-nav">
+      <a href="index.html"   class="overlay-link" data-page="home">Home</a>
+      <a href="works.html"   class="overlay-link" data-page="works">Works</a>
+      <a href="booking.html" class="overlay-link" data-page="booking">Booking</a>
+    </nav>
+    <div class="overlay-footer">
+      <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="overlay-social">Instagram</a>
+      <a href="mailto:koto@gmail.com" class="overlay-social">koto@gmail.com</a>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main-wrapper">
+    <main>
+
+      <!-- Hero -->
+      <section class="hero-section">
+        <div class="page-content">
+          <h1 class="hero-heading">I'm Kotomi.</h1>
+          <p class="hero-sub">With over a decade of experience, I create nail art that is precise, personal, and lasting. Specialising in gel, acrylics, manicure, and pedicure — each set is crafted with care and attention to detail.</p>
+          <a href="booking.html" class="btn">Book an appointment</a>
+        </div>
+      </section>
+
+      <div class="divider"></div>
+
+      <!-- Services -->
+      <section class="section">
+        <div class="page-content">
+          <h2 class="section-heading">Services</h2>
+          <div class="services-grid">
+
+            <div class="service-card">
+              <p class="service-name">Gel Nails</p>
+              <p class="service-desc">Long-lasting colour with a flawless finish. Gel nails stay chip-free for up to three weeks.</p>
+              <p class="service-price">Starting at $65</p>
+              <a href="booking.html" class="btn btn-sm">Book now</a>
+            </div>
+
+            <div class="service-card">
+              <p class="service-name">Acrylic Nails</p>
+              <p class="service-desc">Durable extensions shaped and finished to perfection. Ideal for length, strength, or a complete transformation.</p>
+              <p class="service-price">Starting at $80</p>
+              <a href="booking.html" class="btn btn-sm">Book now</a>
+            </div>
+
+            <div class="service-card">
+              <p class="service-name">Manicure</p>
+              <p class="service-desc">A thorough hand treatment with shaping, cuticle care, and your choice of polish. Classic elegance, every time.</p>
+              <p class="service-price">Starting at $40</p>
+              <a href="booking.html" class="btn btn-sm">Book now</a>
+            </div>
+
+            <div class="service-card">
+              <p class="service-name">Pedicure</p>
+              <p class="service-desc">Relaxing foot care with exfoliation, nail shaping, and a polished finish. A treat from the ground up.</p>
+              <p class="service-price">Starting at $50</p>
+              <a href="booking.html" class="btn btn-sm">Book now</a>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- Reviews -->
+      <section class="section reviews-bg">
+        <div class="page-content">
+          <h2 class="section-heading">What clients say</h2>
+          <div class="reviews-grid">
+
+            <article class="review-card">
+              <div class="stars" aria-label="5 out of 5 stars">
+                <span class="star"></span>
+                <span class="star"></span>
+                <span class="star"></span>
+                <span class="star"></span>
+                <span class="star"></span>
+              </div>
+              <p class="review-quote">"Kotomi is incredibly talented. My nails have never looked this good — I get compliments every single week."</p>
+              <p class="review-author">Sarah M.</p>
+            </article>
+
+            <article class="review-card">
+              <div class="stars" aria-label="5 out of 5 stars">
+                <span class="star"></span>
+                <span class="star"></span>
+                <span class="star"></span>
+                <span class="star"></span>
+                <span class="star"></span>
+              </div>
+              <p class="review-quote">"The attention to detail is unreal. She takes her time and makes sure everything is perfect before you leave."</p>
+              <p class="review-author">Jen T.</p>
+            </article>
+
+            <article class="review-card">
+              <div class="stars" aria-label="5 out of 5 stars">
+                <span class="star"></span>
+                <span class="star"></span>
+                <span class="star"></span>
+                <span class="star"></span>
+                <span class="star"></span>
+              </div>
+              <p class="review-quote">"I've been coming to Kotomi for two years and I wouldn't go anywhere else. Professional, warm, and so skilled."</p>
+              <p class="review-author">Lily R.</p>
+            </article>
+
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div class="footer-grid">
+          <div>
+            <p class="footer-label">Email</p>
+            <p class="footer-value"><a href="mailto:koto@gmail.com">koto@gmail.com</a></p>
+          </div>
+          <div>
+            <p class="footer-label">Phone</p>
+            <p class="footer-value"><a href="tel:6041112345">604 111 2345</a></p>
+          </div>
+          <div>
+            <p class="footer-label">Studio</p>
+            <p class="footer-value">1111 - 6767 Canada Way, Vancouver</p>
+          </div>
+          <div>
+            <p class="footer-label">Instagram</p>
+            <p class="footer-value"><a href="https://instagram.com" target="_blank" rel="noopener noreferrer">instagram.com</a></p>
+          </div>
+        </div>
+        <p class="footer-copy">© 2025 Kotomi. All rights reserved.</p>
+      </div>
+    </footer>
+
+  </div><!-- /.main-wrapper -->
+
+  <script src="js/main.js"></script>
+</body>
+</html>
